@@ -207,7 +207,7 @@ $$C \frac{dT_c(t)}{dt} = Q_i(t) + \rho c V T_i(t) - \rho c V T_c(t) - h A [T_c(t
 * $A$: Diện tích bề mặt tiếp xúc truyền nhiệt của bể ($\text{m}^2$).
 * $C$: Nhiệt dung tổng cộng của toàn bộ khối dung dịch trong bể:
 $$C = m_{tank} \cdot c = \rho \cdot V_{tank} \cdot c \quad (\text{J}/\text{K})$$
-
+heheh
 ### Tuyến tính hóa và Dạng số gia (Incremental Deviation Form):
 Gọi điểm làm việc tĩnh danh định (Operating Point) là $(T_{c0}, Q_{i0}, T_{i0}, T_{00})$.
 Tại trạng thái xác lập:
