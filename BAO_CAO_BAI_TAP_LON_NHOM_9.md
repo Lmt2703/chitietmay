@@ -1,53 +1,3 @@
-# TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐHQG TP. HỒ CHÍ MINH
-## KHOA CƠ KHÍ - BỘ MÔN CƠ ĐIỆN TỬ
-***
-
-# BÁO CÁO BÀI TẬP LỚN MÔN HỌC
-# ĐỘNG LỰC HỌC VÀ ĐIỀU KHIỂN HỆ THỐNG
-### (SYSTEM DYNAMICS AND CONTROL)
-
----
-
-### **ĐỀ TÀI: MÔ HÌNH HÓA ĐỘNG HỌC, ĐỘNG LỰC HỌC VÀ THIẾT KẾ HỆ THỐNG ĐIỀU KHIỂN CHO HỆ THỐNG LỌC VÀ LÀM NGUỘI NƯỚC DÙNG DINH DƯỠNG TRONG CANH TÁC NÔNG NGHIỆP CÔNG NGHỆ CAO**
-
-* **Giảng viên hướng dẫn:** GS. TSKH. Nguyễn Tấn Tiến
-* **Nhóm thực hiện:** Nhóm 9
-* **Tài liệu tham chiếu chính:** *MDPI Applied Sciences 2025, 15, 5381 - "Smart Nutrient Solution Temperature Control System for Oversummering Lettuce Cultivation Based on Adaptive Dung Beetle Optimizer-Fuzzy PID"* (Cai et al., 2025).
-
----
-
-## MỤC LỤC
-
-1. [CHƯƠNG 1: TỔNG QUAN HỆ THỐNG VÀ MÔ TẢ VẬT LÝ](#chương-1-tổng-quan-hệ-thống-và-mô-tả-vật-lý)
-   * 1.1. Đặt vấn đề và tính cấp thiết của đề tài
-   * 1.2. Cấu tạo cơ hệ và các thành phần phần cứng
-   * 1.3. Nguyên lý vận hành của hệ thống lọc và làm nguội
-   * 1.4. Sơ đồ khối chức năng và sơ đồ nguyên lý vật lý
-2. [CHƯƠNG 2: THIẾT LẬP PHƯƠNG TRÌNH ĐỘNG HỌC VÀ ĐỘNG LỰC HỌC CƠ HỆ](#chương-2-thiết-lập-phương-trình-động-học-và-động-lực-học-cơ-hệ)
-   * 2.1. Động lực học phân hệ bơm tuần hoàn và dòng chảy qua bộ lọc áp lực
-   * 2.2. Động lực học phân hệ cơ học cánh khuấy trộn trong bể
-   * 2.3. Động lực học nhiệt - Quá trình trao đổi nhiệt và làm nguội dung dịch
-   * 2.4. Động lực học phân hệ máy lạnh bơm nhiệt nguồn khí
-3. [CHƯƠNG 3: XÂY DỰNG HÀM TRUYỀN VÀ MÔ HÌNH KHÔNG GIAN TRẠNG THÁI](#chương-3-xây-dựng-hàm-truyền-và-mô-hình-không-gian-trạng-thái)
-   * 3.1. Biến đổi Laplace và thiết lập hàm truyền đạt
-   * 3.2. Nhận dạng tham số thực nghiệm theo phương pháp hai điểm
-   * 3.3. Xấp xỉ trễ Padé
-   * 3.4. Mô hình Không gian trạng thái toàn phần (State-Space Model)
-4. [CHƯƠNG 4: PHÂN TÍCH HỆ THỐNG VÀ THIẾT KẾ BỘ ĐIỀU KHIỂN](#chương-4-phân-tích-hệ-thống-và-thiết-kế-bộ-điều-khiển)
-   * 4.1. Phân tích tính ổn định vòng hở và quỹ đạo nghiệm số (Root Locus)
-   * 4.2. Thiết kế bộ điều khiển PID cổ điển
-   * 4.3. Thiết kế bộ điều khiển Mờ thích nghi (Fuzzy PID)
-   * 4.4. Tối ưu hóa thông số bằng thuật toán bọ hung thích nghi (Adaptive DBO)
-5. [CHƯƠNG 5: MÔ PHỎNG SỐ VÀ ĐÁNH GIÁ KẾT QUẢ](#chương-5-mô-phỏng-số-và-đánh-giá-kết-quả)
-   * 5.1. Kịch bản mô phỏng trên Python và MATLAB
-   * 5.2. So sánh đáp ứng bước nhảy của các bộ điều khiển
-   * 5.3. Khả năng kháng nhiễu nhiệt độ môi trường
-   * 5.4. Đánh giá hiệu quả thực địa
-6. [CHƯƠNG 6: KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN](#chương-6-kết-luận-và-hướng-phát-triển)
-7. [TÀI LIỆU THAM KHẢO](#tài-liệu-tham-khảo)
-
----
-
 # CHƯƠNG 1: TỔNG QUAN HỆ THỐNG VÀ MÔ TẢ VẬT LÝ
 
 ## 1.1. Đặt vấn đề và tính cấp thiết của đề tài
@@ -102,7 +52,6 @@ Hệ thống gồm các cụm cơ - điện - nhiệt chính được lắp đ�
    * Module truyền thông không dây 4G: Air724UG kết nối đám mây giám sát từ xa.
    * Khởi động từ (AC Contactor LC1N50) và rơ le nhiệt (LRN357N) đóng cắt các bơm, quạt và cánh khuấy.
 
----
 
 # CHƯƠNG 2: THIẾT LẬP PHƯƠNG TRÌNH ĐỘNG HỌC VÀ ĐỘNG LỰC HỌC CƠ HỆ
 
@@ -235,7 +184,6 @@ $$\frac{R C}{R K_0 + 1} \frac{d\Delta T_c(t)}{dt} + \Delta T_c(t) = \frac{R}{R K
 
 Đây chính là **phương trình vi phân động lực học cấp 1 cơ bản** mô tả động thái nhiệt của dung dịch dinh dưỡng trong bể!
 
----
 
 ## 2.4. Động lực học phân hệ máy lạnh bơm nhiệt nguồn khí
 Công suất nhiệt làm lạnh $Q_i(t)$ do thiết bị bay hơi sinh ra phụ thuộc trực tiếp vào lưu lượng môi chất lạnh tuần hoàn $\dot{m}_r(t)$, vốn được điều khiển bởi tốc độ quay của máy nén trục xoắn $\omega_{comp}(t)$ (hoặc tần số biến tần $f_{inv}$):
@@ -244,7 +192,6 @@ trong đó:
 * $\tau_{chiller}$: Thời gian trễ hình thành chu trình sôi môi chất trong giàn bay hơi.
 * Kết hợp với thời gian trễ vận chuyển của chất lỏng trong đường ống từ giàn lạnh về bể, tổng thời gian trễ thuần của hệ thống được ký hiệu là $\tau$.
 
----
 
 # CHƯƠNG 3: XÂY DỰNG HÀM TRUYỀN VÀ MÔ HÌNH KHÔNG GIAN TRẠNG THÁI
 
@@ -283,7 +230,6 @@ $$\begin{cases} K = 1.7 \\ T = 340\text{ s} \\ \tau = 10\text{ s} \end{cases}$$
 Hàm truyền thực nghiệm của đối tượng điều khiển:
 $$G_p(s) = \frac{1.7}{340 s + 1} e^{-10 s}$$
 
----
 
 ## 3.3. Xấp xỉ trễ Padé
 Khâu trễ phi tuyến $e^{-\tau s} = e^{-10 s}$ không thể phân tích trực tiếp bằng đa thức đại số trong miền $s$. Do đó, ta sử dụng **xấp xỉ Padé bậc 1** (Padé Approximation, Ch.02 & Ch.08):
@@ -294,7 +240,6 @@ $$G_{pade}(s) = \frac{1.7}{340 s + 1} \cdot \frac{1 - 5 s}{1 + 5 s} = \frac{-8.5
 
 **Nhận xét:** Hàm truyền tương đương có 2 cực nằm bên trái trục ảo ($s_1 = -1/340 \approx -0.00294$, $s_2 = -1/5 = -0.2$) và 1 điểm **Zero pha không cực tiểu** (Non-Minimum Phase Zero) nằm bên phải trục ảo tại $s_z = +1/5 = +0.2$. Zero này sinh ra hiện tượng đáp ứng ngược chiều ban đầu (undershoot) đặc trưng của các hệ thống nhiệt động có trễ.
 
----
 
 ## 3.4. Mô hình Không gian trạng thái toàn phần (State-Space Model)
 Áp dụng kiến thức Chương 3 (*Modeling in Time Domain*), ta mô tả toàn bộ cơ hệ đa biến dưới dạng phương trình trạng thái ma trận:
@@ -321,152 +266,7 @@ $$\mathbf{C} = \begin{bmatrix} 1 & 0 & 0 \end{bmatrix}, \quad \mathbf{D} = [0]$$
 
 Kiểm tra định thức ma trận điều khiển được Kalman: $\mathcal{C} = [\mathbf{B} \quad \mathbf{A}\mathbf{B} \quad \mathbf{A}^2\mathbf{B}]$, $\text{rank}(\mathcal{C}) = 3$ (Hệ thống điều khiển được hoàn toàn).
 
----
 
-# CHƯƠNG 4: PHÂN TÍCH HỆ THỐNG VÀ THIẾT KẾ BỘ ĐIỀU KHIỂN
-
-## 4.1. Phân tích tính ổn định vòng hở và quỹ đạo nghiệm số (Root Locus)
-Phương trình đặc tính vòng kín khi ghép nối với bộ khuếch đại tỷ lệ $K_c$:
-$$1 + K_c G_{pade}(s) = 0 \iff 1700 s^2 + (345 - 8.5 K_c) s + (1 + 1.7 K_c) = 0$$
-
-Áp dụng **Tiêu chuẩn ổn định Routh-Hurwitz** (Chương 6):
-Bảng Routh:
-$$\begin{array}{c|cc}
-s^2 & 1700 & 1 + 1.7 K_c \\
-s^1 & 345 - 8.5 K_c & 0 \\
-s^0 & 1 + 1.7 K_c & 
-\end{array}$$
-
-Điều kiện để hệ thống vòng kín ổn định:
-$$\begin{cases} 345 - 8.5 K_c > 0 \implies K_c < 40.58 \\ 1 + 1.7 K_c > 0 \implies K_c > -0.588 \end{cases}$$
-
-Như vậy, khi độ lợi tỷ lệ $K_c \ge 40.58$, nghiệm của phương trình đặc trưng cắt trục ảo chuyển sang nửa bên phải mặt phẳng phức, làm hệ thống mất ổn định hoàn toàn!
-
-```
-                    Mặt phẳng phức s (Root Locus)
-                              jw
-                              ^
-                              |      X Cực Padé (-0.2)
-                              |
-    - - - - - - - - - - - - - + - - - - - - - - - - > O Zero Padé (+0.2)
-             X                |                     (RHP Zero)
-       Cực chính (-0.0029)    |
-                              |
-                              v
-```
-
----
-
-## 4.2. Thiết kế bộ điều khiển PID cổ điển
-Bộ điều khiển PID truyền thống có cấu trúc:
-$$u(t) = K_p e(t) + K_i \int_0^t e(t) dt + K_d \frac{de(t)}{dt}$$
-
-* Chỉnh định theo quy tắc Ziegler-Nichols kết hợp tinh chỉnh trên mô hình:
-  $$K_p = 4.2, \quad K_i = 0.022, \quad K_d = 12.0$$
-* **Hạn chế:** Do quá trình nhiệt có thời gian trễ lớn ($\tau = 10\text{ s}$) và quán tính nhiệt rất cao ($T = 340\text{ s}$), bộ điều khiển PID cố định thông số gặp phải hiện tượng vọt lố lớn ($\sigma = 24.5\%$) và thời gian xác lập kéo dài ($t_s = 200.36\text{ s}$). Khi nhiệt độ môi trường ngoài trời tăng đột biến vào buổi trưa, bộ PID truyền thống phản ứng chậm, làm nhiệt độ dung dịch dao động mạnh.
-
----
-
-## 4.3. Thiết kế bộ điều khiển Mờ thích nghi (Fuzzy PID)
-Để khắc phục nhược điểm của PID truyền thống, bộ điều khiển Fuzzy PID tự điều chỉnh thông số $(K_p, K_i, K_d)$ thời gian thực theo sai số nhiệt độ $e(t) = r(t) - y(t)$ và tốc độ thay đổi sai số $ec(t) = \frac{de(t)}{dt}$:
-
-$$\begin{cases}
-K_p = K_{p0} + \Delta K_p \\
-K_i = K_{i0} + \Delta K_i \\
-K_d = K_{d0} + \Delta K_d
-\end{cases}$$
-
-### Cấu hình bộ điều khiển mờ:
-* 2 ngõ vào: $e \in [-12, +12]^\circ\text{C}$, $ec \in [-3, +3]^\circ\text{C}/\text{s}$.
-* 3 ngõ ra: $\Delta K_p \in [-0.3, 0.3]$, $\Delta K_i \in [-0.06, 0.06]$, $\Delta K_d \in [-0.03, 0.03]$.
-* 7 tập mờ ngôn ngữ: $\{ \text{NB, NM, NS, Z, PS, PM, PB} \}$.
-* Hàm liên thuộc kết hợp tam giác và Gauss.
-* Phương pháp giải mờ: Trọng tâm diện tích (Centroid Defuzzification).
-* Hệ thống 49 luật mờ (xây dựng theo kinh nghiệm chuyên gia nhiệt động học, Table 3 trong tài liệu MDPI).
-
----
-
-## 4.4. Tối ưu hóa thông số bằng thuật toán bọ hung thích nghi (Adaptive DBO)
-Thuật toán DBO mô phỏng 4 hành vi tự nhiên của loài bọ hung: lăn phân, nhảy múa đổi hướng, sinh sản, và trộm thức ăn.
-* Hàm mục tiêu tối ưu hóa (Fitness Function) kết hợp sai số tích phân tuyệt đối và thời gian (ITAE) cùng độ vọt lố:
-$$J = \int_0^\infty \left( w_1 t |e(t)| + w_2 u^2(t) \right) dt + w_3 \sigma\%$$
-* Thuật toán tự động tìm kiếm bộ hệ số lượng tử hóa ($K_e, K_{ec}$) và hệ số tỉ lệ ($K_{up}, K_{ui}, K_{ud}$) tối ưu, giúp rút ngắn thời gian đáp ứng và triệt tiêu độ vọt lố.
-
----
-
-# CHƯƠNG 5: MÔ PHỎNG SỐ VÀ ĐÁNH GIÁ KẾT QUẢ
-
-## 5.1. Kịch bản mô phỏng trên Python và MATLAB
-Mô hình mô phỏng đã được lập trình chi tiết trong hai tệp mã nguồn đính kèm:
-* `simulation_control.py`: Mô phỏng số trên nền tảng Python (sử dụng thư viện `scipy.signal`, `numpy`, `matplotlib`).
-* `simulation_matlab.m`: Mô phỏng trên nền tảng MATLAB.
-
-Tín hiệu thử nghiệm: Bước nhảy nhiệt độ làm mát từ trạng thái môi trường về nhiệt độ sinh trưởng tối ưu của rau ($22^\circ\text{C}$). Tại thời điểm $t = 350\text{ s}$, đưa vào một xung nhiễu nhiệt độ môi trường $\Delta T_0 = +5^\circ\text{C}$ để kiểm tra tính bền vững và khả năng kháng nhiễu.
-
----
-
-## 5.2. So sánh đáp ứng bước nhảy của các bộ điều khiển
-
-Bảng tổng hợp các chỉ tiêu chất lượng điều khiển (kết quả mô phỏng và kiểm nghiệm thực nghiệm):
-
-| Chỉ tiêu chất lượng | PID truyền thống | Fuzzy PID thông thường | Adaptive DBO-Fuzzy PID |
-| :--- | :---: | :---: | :---: |
-| **Thời gian xác lập ($t_s$, tiêu chuẩn $\pm 5\%$)** | $200.36\text{ s}$ | $158.42\text{ s}$ | **$35.23\text{ s}$** (Nhanh hơn $82.4\%$) |
-| **Độ quá điều chỉnh (Vọt lố $\sigma\%$)** | $24.50\%$ | $9.10\%$ | **$2.18\%$** (Giảm $11.2$ lần) |
-| **Sai số xác lập ($e_{ss}$)** | $0.035^\circ\text{C}$ | $0.016^\circ\text{C}$ | **$0.009^\circ\text{C}$** |
-| **Thời gian tăng trưởng ($t_r$)** | $52.4\text{ s}$ | $45.1\text{ s}$ | **$18.6\text{ s}$** |
-
-```
-    y(t)
-    ^
-1.25|          _--_ (PID vọt lố 24.5%)
-    |         /    \
-1.10|        /      \____ (Fuzzy PID vọt lố 9.1%)
-1.02|       /____________ (DBO-Fuzzy PID: vọt lố 2.18%, xác lập cực nhanh ts = 35.23s)
-1.00|---------------------------------------------------------- Target
-    |      /
-0.00+-----+--------+---------+---------+---------> t (giây)
-    0     35s      158s      200s      350s
-```
-
-*Đồ thị kết quả chi tiết được lưu trữ tại file ảnh:*
-* `step_response_comparison.png`: Đồ thị so sánh đường cong đáp ứng quá độ của 3 bộ điều khiển.
-* `root_locus_analysis.png`: Quỹ đạo nghiệm số của mô hình Padé.
-* `open_loop_identification.png`: Đường cong đáp ứng vòng hở và phương pháp nhận dạng hai điểm.
-
----
-
-## 5.3. Khả năng kháng nhiễu nhiệt độ môi trường
-Tại thời điểm $t = 350\text{ s}$, khi nhiệt độ không khí bên ngoài tăng mạnh:
-* Bộ điều khiển PID bị dao động với biên độ lệch nhiệt độ lớn ($\Delta T_{max} \approx 0.22^\circ\text{C}$) và mất hơn $95\text{ s}$ để hồi phục.
-* Bộ điều khiển DBO-Fuzzy PID lập tức phát hiện tốc độ biến thiên sai số $ec(t)$, tự động tăng độ lợi $K_p$ và tác động $K_d$ để bù công suất lạnh cho máy nén, giữ độ lệch cực đại dưới $0.04^\circ\text{C}$ và ổn định lại chỉ sau $18\text{ s}$.
-
-*Đồ thị kiểm chứng:* `disturbance_rejection.png`.
-
----
-
-## 5.4. Đánh giá hiệu quả thực địa trong canh tác rau diếp
-Theo số liệu thử nghiệm thực địa liên tục trong tháng 8/2024 (nhiệt độ môi trường nhà kính đạt $41.8^\circ\text{C}$):
-* Khu vực không làm mát (Lô A): Nhiệt độ dung dịch trung bình đạt $32.76^\circ\text{C}$, bộ rễ bị thối nhũn, năng suất thương phẩm giảm nghiêm trọng.
-* Khu vực dùng PID cổ điển (Lô B): Nhiệt độ trung bình $22.60^\circ\text{C}$, tuy nhiên trong khung giờ $11:00 - 17:00$ nhiệt độ dao động lớn ($\pm 2.1^\circ\text{C}$).
-* Khu vực ứng dụng hệ thống DBO-Fuzzy PID (Lô C): Nhiệt độ duy trì ổn định tuyệt đối tại $21.98^\circ\text{C} \approx 22.0^\circ\text{C}$ (đạt độ lệch chuẩn nhỏ nhất), rễ cây phát triển trắng muốt, sinh khối rau diếp tăng $38.4\%$ so với lô B và tăng $185\%$ so với lô đối chứng A.
-
----
-
-# CHƯƠNG 6: KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN
-
-## 6.1. Kết luận
-Bài tập lớn của Nhóm 9 đã hoàn thành toàn diện các yêu cầu kỹ thuật và khoa học của môn học *Động lực học và Điều khiển Hệ thống*:
-1. **Thiết lập hoàn chỉnh hệ phương trình động học và động lực học cơ hệ đa miền** cho hệ thống lọc và làm mát dung dịch dinh dưỡng: bao gồm phương trình động cơ - bơm tuần hoàn, dòng chảy qua lớp màng lọc áp lực, động học cánh khuấy trộn đồng nhất trường nhiệt, và phương trình cân bằng năng lượng nhiệt động lực học trong bể chứa.
-2. **Xây dựng mô hình hàm truyền và mô hình không gian trạng thái** của đối tượng, nhận dạng tham số từ thực nghiệm ($K = 1.7, T = 340\text{ s}, \tau = 10\text{ s}$), phân tích điểm Zero pha không cực tiểu qua xấp xỉ Padé và xác định biên độ ổn định theo tiêu chuẩn Routh-Hurwitz ($K_c < 40.58$).
-3. **Thiết kế và mô phỏng thành công 3 thuật toán điều khiển**: PID cổ điển, Fuzzy PID thích nghi và DBO-Fuzzy PID tối ưu. Kết quả kiểm chứng chứng minh giải thuật DBO-Fuzzy PID vượt trội hoàn toàn: rút ngắn thời gian xác lập từ $200.36\text{ s}$ xuống còn $35.23\text{ s}$, giảm vọt lố từ $24.5\%$ xuống $2.18\%$ và triệt tiêu xuất sắc nhiễu môi trường nhiệt độ cao mùa hè.
-
-## 6.2. Hướng phát triển
-* Mở rộng mô hình điều khiển dự báo theo mô hình (Model Predictive Control - MPC) kết hợp dự báo thời tiết bức xạ mặt trời thời gian thực.
-* Tích hợp điều khiển tối ưu hóa đa biến: đồng thời kiểm soát nhiệt độ, nồng độ oxy hòa tan (DO), pH và độ dẫn điện (EC) trong dung dịch dinh dưỡng.
-* Ứng dụng biến tần điều khiển tốc độ máy nén theo thuật toán tiết kiệm năng lượng xanh (Energy-efficient Variable Speed Chiller).
-
----
 
 # TÀI LIỆU THAM KHẢO
 
